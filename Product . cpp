@@ -1,0 +1,31 @@
+#include "Product.hpp"
+#include <iostream>
+
+Product::Product(int id, std::string name, double price)
+{
+    this->id = id;
+    this->name = name;
+    this->price = price;
+}
+
+int Product::getId() const
+{
+    return id;
+}
+
+std::string Product::getName() const
+{
+    return name;
+}
+
+double Product::getPrice() const
+{
+    return price;
+}
+
+void Product::display() const
+{
+    std::cout << id << ". "
+              << name << " - R"
+              << price << std::endl;
+}
